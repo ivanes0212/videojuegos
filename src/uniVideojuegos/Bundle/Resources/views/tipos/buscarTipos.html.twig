@@ -1,0 +1,11 @@
+{% extends 'uniVideojuegosBundle::layout.html.twig' %}
+
+
+{% block cuerpo -%}
+<br>Buscar tipos:
+<form action="{{path('tipos_responder_tipos')}}" method="POST">
+    <input type="text" name="nombre" value="Tipos a buscar">
+    <input type="submit" value="OK">
+</form>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'uniVideojuegosBundle::layout.html.twig' %}
+
+
+{% block cuerpo -%}
+     {# Ahora viene el javascript #}
+
+<script type="text/javascript">
+function submitform(obj) {
+document.forms["selectPlataforma"].submit();
+}
+</script>
+
+{# Fin del javascript #}
+<br>Buscar plataforma:
+<form id="selectPlataforma" action="{{path('plataforma_responder_plataforma')}}" method="POST">
+    
+   <select name="nombre" onChange="submitform(this)">
+       <option value="Todas">Todas</option> 
+       
+       {% for plat in plataforma %}
+            <option value={{plat.nombre}}>{{plat.nombre}}</option>
+        {% endfor %}
+    </select>  
+    
+    
+   
+    
+</form>
+    {% endblock %}

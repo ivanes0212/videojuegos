@@ -1,0 +1,22 @@
+{% extends 'uniVideojuegosBundle::layout.html.twig' %}
+
+
+{% block cuerpo -%}
+    <h1>Listado de juegos en {{nomPlat}}:</h1>
+
+        {% for entity in entities %}
+               {% for pl in entity.platjue %}
+            
+            
+        <h2><a href="{{ path('juegos_show', { 'id': pl.id }) }}">{{ pl.nombre }}</a></h2>
+              
+        Puntuación: {{ pl.puntuacion }} 
+       
+       
+                <br>
+                
+                
+                {% endfor %}
+                
+        {% endfor %}
+    {% endblock %}

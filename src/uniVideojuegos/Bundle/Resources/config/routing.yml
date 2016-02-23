@@ -1,0 +1,23 @@
+uni_videojuegos_plataforma:
+    resource: "@uniVideojuegosBundle/Resources/config/routing/plataforma.yml"
+    prefix:   /plataforma
+
+uni_videojuegos_tipos:
+    resource: "@uniVideojuegosBundle/Resources/config/routing/tipos.yml"
+    prefix:   /tipos
+
+uni_videojuegos_juegos:
+    resource: "@uniVideojuegosBundle/Resources/config/routing/juegos.yml"
+    prefix:   /juegos
+
+uni_videojuegos_homepage:
+    path:     /inicio
+    defaults: { _controller: uniVideojuegosBundle:Default:index }
+        
+linkPlataformas:
+    path:     /linkPlataformas
+    defaults: { _controller: "uniVideojuegosBundle:plataforma:buscarPlataforma" }
+    
+linkTipos:
+    path:     /linkTipos
+    defaults: { _controller: "uniVideojuegosBundle:tipos:buscarTipo" }

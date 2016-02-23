@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+        <link href="{{ asset ('bundles/univideojuegos/css/fuente.css') }}" type="text/css" rel="stylesheet" />
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+       <div id="cabecera">
+            {% block cabecera %}
+                <h1><font color="#CBCBFD" size="30">Clasificación mundial de Juegos</font></h1>
+                <h3>
+                    <ul id="nav">
+        <li id="nav-1"><a href="{{ path('juegos') }}">Juegos</a></li>
+	<li id="nav-2"><a href="{{ path('tipos') }}">Tipos</a></li>
+	<li id="nav-3"><a href="{{ path('plataforma') }}">Plataforma</a></li>
+                    </ul>
+                </h3>
+            {% endblock %}
+        </div>
+       
+         <div id="cuerpo">
+            {% block cuerpo %}{% endblock %}
+        </div>
+        
+         <div id="pie">
+            {% block pie %}
+                <h6><font color="#CBCBFD">
+                    CONTACTO -> ivanesfc@hotmail.com
+                    <br>
+                    SITIO WEB -> misjuegos.com
+                    <br>
+                    CENTRO -> uni Eibar-Ermua
+                    </font></h6>
+            {% endblock %}
+        </div>
+    </body>
+</html>

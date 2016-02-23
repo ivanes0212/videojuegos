@@ -1,0 +1,30 @@
+{% extends 'uniVideojuegosBundle::layout.html.twig' %}
+
+
+{% block cuerpo -%}
+<h1>Listado de juegos de este tipo: {{nomTip}}</h1>
+    
+           {% for entity in entities %}
+               <h3>Juegos de tipo -->  {{entity.nombre}}</h3>
+               {% for tp in entity.tipjues %}
+            
+            
+        <h2><a href="{{ path('juegos_show', { 'id': tp.id }) }}">{{ tp.nombre }}</a></h2>
+             
+            <br>
+            Plataforma en la que está este juego:
+            <br>
+            <br>
+            {% for jp in tp.jueplat %}
+            {{ jp.nombre}}
+            
+            <br>
+            
+            
+               
+                {% endfor %}
+                {% endfor %}
+                {% endfor %}
+                
+                
+{% endblock %}

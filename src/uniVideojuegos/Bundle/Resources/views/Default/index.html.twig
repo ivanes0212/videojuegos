@@ -1,0 +1,11 @@
+{% extends 'uniVideojuegosBundle::layout.html.twig' %}
+
+
+{% block cuerpo -%}
+    <img src="{{ asset('bundles/univideojuegos/imagenes/uniencounter.jpeg') }}"width=20% height=10%>
+    <br>
+    <a href="{{ path('plataforma_buscar_plataforma') }}">Buscar Plataforma</a>
+    <br>
+    <a href="{{ path('tipo_buscar_tipo') }}">Buscar Tipo</a>
+    {% endblock %}
+

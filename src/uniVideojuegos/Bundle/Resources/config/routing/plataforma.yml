@@ -1,0 +1,39 @@
+plataforma:
+    path:     /
+    defaults: { _controller: "uniVideojuegosBundle:plataforma:index" }
+
+plataforma_show:
+    path:     /{id}/show
+    defaults: { _controller: "uniVideojuegosBundle:plataforma:show" }
+
+plataforma_new:
+    path:     /new
+    defaults: { _controller: "uniVideojuegosBundle:plataforma:new" }
+
+plataforma_create:
+    path:     /create
+    defaults: { _controller: "uniVideojuegosBundle:plataforma:create" }
+    requirements: { _method: post }
+
+plataforma_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "uniVideojuegosBundle:plataforma:edit" }
+
+plataforma_update:
+    path:     /{id}/update
+    defaults: { _controller: "uniVideojuegosBundle:plataforma:update" }
+    requirements: { _method: post|put }
+
+plataforma_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "uniVideojuegosBundle:plataforma:delete" }
+    requirements: { _method: post|delete }
+
+plataforma_buscar_plataforma:
+    path:     /buscarplataforma
+    defaults: { _controller: "uniVideojuegosBundle:plataforma:buscarPlataforma" }
+
+plataforma_responder_plataforma:
+    path:     /responderplataforma
+    defaults: { _controller: "uniVideojuegosBundle:plataforma:responderPlataforma" }
+    requirements: { _method: post|put }
